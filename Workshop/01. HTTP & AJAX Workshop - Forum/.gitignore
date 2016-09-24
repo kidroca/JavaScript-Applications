@@ -1,0 +1,9 @@
+## IDE
+.idea
+*.iml
+out
+gen
+
+## Packages
+node_modules
+public/vendor
