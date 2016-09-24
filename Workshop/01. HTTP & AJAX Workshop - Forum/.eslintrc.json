@@ -1,0 +1,73 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jquery": true
+    },
+
+
+    "extends": "eslint:recommended",
+
+
+    "rules": {
+        "indent": ["error",  4],
+        
+        // Use single quotes
+        "quotes": ["error", "single"],
+        // Always add `;`
+        "semi": ["error", "always"],
+
+        // Add a space after a comma, no space before comma
+        "comma-style": "error",
+        "comma-spacing": "error",
+        
+        // Line break style is LF ('\n')
+        "linebreak-style": ["error", "unix"],
+        // Line length should be 100
+        "max-len": ["error", 100],
+        // No more than 2 empty lines 
+        "no-multiple-empty-lines": 2,
+        // No trailing space at the end of the line
+        "no-trailing-spaces": "error",
+        // Add a blank line before a return statement
+        "newline-before-return": "error",
+        // When a line is too long break after an operator
+        "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before" } }],
+
+    	// variables should be declared with `var` for each variable
+        "one-var": ["error", "never"],
+
+    	// Inline objects like {a: 'val'} not like: { a: 'val' }
+		"object-curly-spacing": ["error", "never"],
+		// Declare object properties on separate lines if they are more than 2
+        "object-curly-newline": ["warn", {"multiline": true, "minProperties": 2}],
+
+        // Warn if an expresion can be converted from x = x + 1 to x += 1
+        "operator-assignment": ["warn", "always"],
+        // Don't warn for console usages
+        "no-console": "off",
+        // Warn if variables or properties have undersoces in the middle
+        "camelcase": "warn",
+        // Warns if a ternary expression can be simplified
+        "no-unneeded-ternary": "warn",
+
+        // This should be assigned as `var _this = this`
+        "consistent-this": ["warn", "_this"],
+
+        "require-jsdoc": ["warn", {
+	        "require": {
+	            "FunctionDeclaration": false,
+	            "MethodDefinition": true,
+	            "ClassDeclaration": true
+	        }
+    	}]
+    },
+
+
+    // Dont warn for global variables with this names
+    "globals": {
+        "moment": true,
+        "threads": true,
+    	"data": true
+    }
+}
